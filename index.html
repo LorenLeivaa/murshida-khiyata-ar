@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مرشدتكِ للخياطة في جيبكِ</title>
+<meta name="description" content="مرشدتكِ للخياطة بالذكاء الاصطناعي، تعرف خزانة الباترونات صفحةً صفحة.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-title" content="مرشدتي">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="logo.jpg">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css?v=1">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="marca">
+    <div class="avatar" id="avatar">
+      <img src="logo.jpg" alt="" id="logo" onerror="this.remove()">
+      <span class="iniciales">م</span>
+    </div>
+    <div class="marca-texto">
+      <h1>مرشدتكِ للخياطة في جيبكِ</h1>
+      <p>خزانة الباترونات</p>
+    </div>
+    <span class="etiqueta">مساعدة ذكية</span>
+  </div>
+  <div class="acciones">
+    <div class="contador" id="contador" aria-live="polite"></div>
+    <button type="button" class="nuevo" id="nuevo" hidden>محادثة جديدة</button>
+  </div>
+</header>
+
+<main class="hilo" id="hilo" role="log" aria-live="polite" aria-label="المحادثة">
+
+  <section class="bienvenida" id="bienvenida">
+    <div class="avatar avatar-grande" aria-hidden="true">
+      <img src="logo.jpg" alt="" onerror="this.remove()">
+      <span class="iniciales">م</span>
+    </div>
+    <h2>أهلًا بكِ! ماذا ستخيطين اليوم؟</h2>
+    <p class="bajada">
+      أعرف كل تصميم وكل جدول مقاسات وكل خطوة في خزانة الباترونات.
+      اسأليني أي شيء، أرسلي لي صورة، أو اختاري أحد هذه الأسئلة:
+    </p>
+    <div class="sugerencias">
+      <button class="sugerencia" type="button">حدث خطأ أثناء الخياطة. هل يمكنني أن أرسل لكِ صورة؟</button>
+      <button class="sugerencia" type="button">هذه مقاساتي. أي تصميم وأي مقاس أقصّ؟</button>
+      <button class="sugerencia" type="button">كم أحتاج من القماش لهذا الباترون؟</button>
+      <button class="sugerencia" type="button">كيف أطبع الباترون بالحجم الصحيح وألصق الصفحات؟</button>
+    </div>
+  </section>
+
+</main>
+
+<div class="pie">
+  <div class="adjunto" id="adjunto" hidden>
+    <img id="adjunto-img" alt="الصورة المرفقة">
+    <button type="button" id="quitar-foto" aria-label="إزالة الصورة">×</button>
+  </div>
+  <form class="compositor" id="compositor">
+    <button type="button" id="foto" class="boton-foto" aria-label="إضافة صورة">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M4 8h3l2-2.5h6L17 8h3v11H4z" fill="none" stroke="currentColor"
+              stroke-width="1.9" stroke-linejoin="round"/>
+        <circle cx="12" cy="13" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/>
+      </svg>
+    </button>
+    <input type="file" id="archivo" accept="image/*" hidden>
+    <textarea id="entrada" rows="1" placeholder="اسألي مرشدتكِ للخياطة…"
+              enterkeyhint="send" autocomplete="off"
+              aria-label="اسألي مرشدتكِ للخياطة"></textarea>
+    <button type="submit" id="enviar" aria-label="إرسال">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path d="M12 20V5M5 12l7-7 7 7" fill="none" stroke="currentColor"
+              stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </form>
+  <p class="aviso">
+    مساعدة بالذكاء الاصطناعي وقد تخطئ: راجعي جدول المقاسات في كتابكِ قبل قصّ الأقماش الغالية.
+    مساعدة في الخياطة فقط، وليست نصيحة طبية أو قانونية أو مالية.
+    في ملابس الأطفال والحيوانات الأليفة اتّبعي دائمًا تعليمات السلامة.
+  </p>
+</div>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
